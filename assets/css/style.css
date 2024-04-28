@@ -1,0 +1,88 @@
+/****** Generally ***********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, body * {
+  display: flex;
+  flex-direction: column;
+}
+
+body script {
+  display: none; /* Masquage pour live server */
+}
+
+/**********header***********/
+.header {
+  align-items: center;
+}
+.header_logo {
+  width: 197px;
+  height: 36px;
+  margin: 8px;
+  box-shadow: rgba(0, 2, 4, 0.25) 0px 25px 20px -20px;
+}
+.header_location {
+  width: 100%;
+  height: 50px;
+  background-color: #EAEAEA;
+  border: 1px solid #EAEAEA;
+  justify-content: center;
+  flex-direction: row;
+  gap: 17px;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/**********section menu***********/
+.menu {
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #FFFFFF;
+}
+.menu_buttonsearch {
+  border: 1px solid #FF79DA;
+  width: 40%;
+  background: linear-gradient(to bottom, #FF79DA 50%, #9356DC 80%);
+  border-radius: 20px;
+}
+
+/***********Section explications*************/
+.Explications {
+  align-items: center;
+  gap: 20px;
+}
+.Explications_bg {
+  width: 80%;
+  height: 72.38px;
+  border: 1px solid #EAEAEA;
+  background-color: #EAEAEA;
+  border-radius: 20px;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.Explications .picture {
+  width: 100%;
+}
+
+/****************restaurants****************/
+.restaurants {
+  gap: 20px;
+}
+
+/*****************footer********************/
+.footer {
+  background-color: #353535;
+  text-decoration-color: #FFFFFF;
+}
+
+.footer_logo {
+  width: 33%;
+}/*# sourceMappingURL=style.css.map */
