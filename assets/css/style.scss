@@ -1,115 +1,217 @@
-
 /****** Generally ***********/
 
-*{  
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-body,body * {
-    display:flex;
-    flex-direction: column;
+body,
+body * {
+  display: flex;
+  flex-direction: column;
 }
 
 body script {
-  display: none;/* Masquage pour live server */
+  display: none;
+  /* Masquage pour live server */
 }
-    $main-color: #9356DC;
-    $second-color: #FF79DA;
-    $bg-color:#EAEAEA;
-    $plat-color:#FFFFFF;
-    $footer-color: #353535;
-   
+
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$bg-color: #F6F6F6;
+$location-color: #EAEAEA;
+$plater-color: #FFFFFF;
+$footer-color: #353535;
+
+
 
 /**********header***********/
 .header {
-    align-items: center;
-   
 
-    &_logo {
-        width : 197px;
-        height: 36px;
-        margin: 8px;
-        box-shadow: rgba(0,2 , 4, 0.25) 0px 25px 20px -20px;
-      
-    }
-    &_location {
-      width: 100%;
-        height: 50px;
-        background-color: $bg-color;
-        border: 1px solid $bg-color;     
-        justify-content: center;
-        flex-direction: row;
-        gap: 17px;
-        align-items: center;  
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    }
+
+  &__container {
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+  }
+
+  &__logo {
+    width: 48%;
+    height: 36px;
+    margin: 8px;
+  }
+
+  &__location {
+    width: 100%;
+    height: 50px;
+    background-color: $location-color;
+    justify-content: center;
+    flex-direction: row;
+    gap: 17px;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 9998;
+
+  }
 }
 
 /**********section menu***********/
 .menu {
   align-items: center;
   gap: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background-color:$plat-color;
+  padding: 40px 0;
+  background-color: $bg-color;
+  text-align: center;
 
-  &_buttonsearch {
-    border: 1px solid $second-color;
-    width:40%;    
-    background: linear-gradient(to bottom, $second-color 50%, $main-color 80%);
-    border-radius: 20px;
-   
-    
-   
-    }   
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700px;
   }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__buttonsearch {
+    border-radius: 40px;
+    width: 55%;
+    height: 50px;
+    background: linear-gradient(to bottom, $second-color 0%, $main-color 100%);
+    justify-content: center;
+  }
+
+  &text__button {
+    align-items: center;
+    color: #FFFFFF;
+  }
+}
+
 /***********Section explications*************/
 
-.Explications {
-  align-items: center;
+.explications {
   gap: 20px;
+  padding: 40px 20px;
 
-  &_bg {
-    width: 80%;
+  &__functioning {
+    margin-bottom: 10px;
+  }
+
+  &__container {
+    gap: 20px;
+    padding-left: 12px;
+  }
+
+  &__bg {
     height: 72.38px;
-    border: 1px solid $bg-color;
+    width: 100%;
     background-color: $bg-color;
     border-radius: 20px;
     gap: 30px;
-    flex-direction:row ;
-    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
-   
+    position: relative;
+    padding-left: 40px;
   }
-  
 
-  .picture{
-    width: 100%;
-
+  &__number {
+    font-weight: 500;
+    font-size: 14px;
+    color: $plater-color;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #9356DC;
+    position: absolute;
+    left: -12px;
   }
-  }
- /****************restaurants****************/
 
- .restaurants{
+
+}
+
+/****************restaurants****************/
+
+.restaurants {
+  padding: 40px 20px 30px 20px;
+  background-color: $bg-color;
   gap: 20px;
- }
+  position: relative;
 
-
- /*****************footer********************/
+  /*&__title{  
+    
+  }
  
- .footer{
+  &__cardcontent{
   
- background-color: #353535;
- 
- text-decoration-color: #FFFFFF;
- }
+    
+  }*/
 
- .footer_logo{
-  width: 33%;
-  
-  
+  &__picture {
+    position: relative;
+  }
 
- }
+  &__conturn {
+    width: 100%;
+    border-radius: 20px 20px 20px 0px;
+    height: 231px;
+
+  }
+
+  &__new {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: #99E2D0;
+    padding: 5px;
+    border-radius: 2px;
+  }
+  &__textpicture{
+    color: #008766;
+    ;
+
+  }
+}
+
+
+
+
+.border {
+  width: 100%;
+  border-bottom: solid $plater-color 2px;
+  border-left: solid $plater-color 2px;
+  border-right: solid $plater-color 2px;
+}
+
+/*.heart {
+
+}*/
+
+
+/*****************footer********************/
+
+.footer {
+
+  background-color: #353535;
+  text-decoration-color: #FFFFFF;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+  color: $plater-color;
+
+
+
+  &__logo {
+    width: 33%;
+  }
+
+  &__online {
+    flex-direction: row;
+    gap: 7px;
+  }
+}
