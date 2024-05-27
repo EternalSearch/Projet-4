@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfoodpage5</title>
+    <title>A la française</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,122 +13,189 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<!--********************************************header**********************************************************-->
+<!--**********************************header***********************************-->
 
 <body>
     <header>
         <div class="header">
-            <i class="fa-solid fa-arrow-left"></i>
-            <img class="header_logo" src="/assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
+            <a class="arrow" href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img class="header__logo" src="/assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
         </div>
-        
     </header>
-    <!--********************************************-->
-    <img src="/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
-    <nav class="description">
-        <h1 class="description__titlerestaurants"><i class="heart fa-regular fa-heart"></i>A la francaise</h1>
-        <p class="description__lefttitle">ENTRÉES
-            <div class="border"></div>  
-      
-            <div class="description__bgmenuanother">
-                <div class="description__started">
-                    <h3>Tartare de poulpe acidulé</h3>
-                    <p>Aux zestes d'orange
-                        25€
-                        </p>
-                </div>
-           </div>
-           <div class="description__bgmenuanother">
-            <div class="description__started">
-                    <h3>Velouté de légumes d'antan</h3>
-                    <p>Carotte, panais, topinambour
-                        35€
-                       
-                         </p>
-                </div>
+    <!--*******************************description*****************************-->
+    <img class="img" src="/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+  <nav class="description">
+        <div class="description__name">
+            <h1 class="description__titlerestaurants shrikhand-regular"></i>A la francaise</h1>
+            <i class="simple__heart fa-regular fa-heart"></i>        
             </div>
-            <div class="description__bgmenuanother">
-                <div class="description__started">
-                    <h3>Soupe à l'oignon</h3>
-                    <p>Revisitée
-                        20€
-                       </p>
-                </div>
-         </div>    
-     
-      
-            <p>PLATS</p>
-            <div class="border"></div>
-            <div class="description__bgmenuanother">
-                <div class="plater_title">
-                    <h3>Coquilles Saint-Jacques</h3>
-                    <p>Accompagnées d'une purée de panais
-                        40€
-                        
-                        </p>
-                </div>
-           </div>
-           <div class="description__bgmenuanother">
-            <div class="plater_title">
-                    <h3>Magret de canard</h3>
-                    <p>Et parmentier de pommes de terre
-                        35€</p>
-                </div>
-          </div>                                                              
-          <div class="description__bgmenuanother">
-            <div class="plater_title">
-                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                    <p> Sur son lit de gnocchis aux légumes
-                        44€
-                        </p>
-                </div>
-         </div>       
+            <main class="description">
+                <div class="description__name">
+                    <h1 class="description__titlerestaurants shrikhand-regular">A la française</h1>
+                    <div class="description__heartcontainer">
+                        <i class="heart fa-regular fa-heart"></i>
+                    </div>
+                </div>        
+                <section class="started">
+                    <div class="description__bigtitle">
+                        <p class="description__lefttitle">ENTRÉES
+                        <div class="border"></div>
+                    </div>        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Tartare de poulpe acidulé</h3>
+                            <p>Aux zestes d'orange</p>
+                        </div>
+                        <span class="price__right">25€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Velouté de légumes d'antan</h3>
+                            <p>Carotte, panais, topinambour</p>
+                        </div>
+                        <span class="price__right">35€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Soupe à l'oignon</h3>
+                            <p>Revisitée</p>
+                        </div>
+                        <span class="price__right">20€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="plater">
+                    <div class="description__bigtitle">
+                        <p class="description__lefttitle">PLATS
+                        <div class="border"></div>
+                    </div>
+        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Coquilles Saint-Jacques</h3>
+                            <p>Accompagnées d'une purée de panais</p>
+                        </div>
+                        <span class="price__right">40€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Magret de canard</h3>
+                            <p>Et parmentier de pommes de terre</p>
+                        </div>
+                        <span class="price__right">35€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                            <p>Sur son lit de gnocchis aux légumes</p>
+                        </div>
+                        <span class="price__right">44€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="desserts">
+                    <div class="description__bigtitle">
+                        <p class="description__lefttitle">DESSERTS</p>
+                        <div class="border"></div>
+                    </div>
+        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Pétales de violettes glacés</h3>
+                            <p>Et purée de noisettes</p>
+                        </div>
+                        <span class="price__right">18€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Fondant au chocolat</h3>
+                            <p>Revisitée</p>
+                        </div>
+                        <span class="price__right">18€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="description__bgmenuanother">
+                        <div class="description__started">
+                            <h3>Millefeuille croustillant</h3>
+                            <p>Myrtilles et pâte d'amande</p>
+                        </div>
+                        <span class="price__right">23€</span>
+                        <div class="description__bganimation">
+                            <div class="description__checkcontainer">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+    <!--********************************button******************************************-->
+    <div class="btn">
+        <div class="commandbuttonsearch">
+            <p class="butontext">Commander</p>
+        </div>
+    </div>
+  <!--********************************footer******************************************-->  
+    <footer>
+        <div class="footer">
+            <h3 class="footer__logo shrikhand-regular">ohmyfood</h3>
+            <ul>
+                <li class="footer__online"><i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </li>
+                <li class="footer__online"><i class="fa-solid fa-handshake-angle"></i>
+                    <p>Devenir partenaire</p>
+                </li>
+                <li> Mentions légales </li>
+                <li> <a href="mailto://omyfood@example.com">Contacts</a></li> 
+            </ul>
+        </div>
+    </footer>
 
-       
-            <p>DESSERTS</p>
-            <div class="border"></div>
-            <div class="description__bgmenuanother">
-                <div class="dessert_title">
-                    <h3>Pétales de violettes glacés</h3>
-                    
-                    <p>Et purée de noisettes
-                        18€</p>
-                </div>
-           </div> 
-           <div class="description__bgmenuanother">
-            <div class="dessert_title">
-                    <h3></h3>
-                    <p>
-                       </p>
-                </div>          
-         </div>      
-         <div class="description__bgmenuanother">
-            <div class="dessert_title">
-                    <h3>Fondant au chocolat</h3>
-                    <p>Revisité
-                        22€
-                        </p>                   
-             </div> 
-         </div>               
-        </section>
-        <footer>
-            <div class="footer">
-                <h3 class="footer__logo shrikhand-regular">ohmyfood</h3>
-                <ul>
-                    <li class="footer__online"><i class="fa-solid fa-utensils"></i>
-                        <p>Proposer un restaurant</p>
-                    </li>
-                    <li class="footer__online"><i class="fa-solid fa-handshake-angle"></i>
-                        <p>Devenir partenaire</p>
-                    </li>
-                    <li> Mentions légales </li>
-                    <li> Contacts </li>
-                </ul>
-    
-            </div>
-        </footer>
-    
-    </nav>
+
 </body>
