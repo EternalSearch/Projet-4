@@ -63,10 +63,11 @@ a {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     z-index: 9999;
   }
-  .arrow{
+
+  .arrow {
     position: absolute;
-    top:25px;
-    left:25px;
+    top: 25px;
+    left: 25px;
   }
 }
 
@@ -208,6 +209,11 @@ a {
   background-color: $bg-color;
   gap: 20px;
   position: relative;
+  margin-bottom: 60px;
+
+  &__container {
+    gap: 18px;
+  }
 
   &__cardcontent {
     background-color: #FFFFFF;
@@ -277,7 +283,7 @@ a {
 /*****************footer********************/
 @mixin sizetext($font-weight) {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $font-weight;
 }
 
 .footer {
@@ -287,6 +293,7 @@ a {
   gap: 16px;
   color: $plater-color;
   margin-top: -60px;
+
 
 
   &__logo {
@@ -371,6 +378,7 @@ a {
   position: relative;
   z-index: -1;
   height: 275px;
+  object-fit: cover;
 }
 
 
@@ -412,6 +420,10 @@ a {
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+  .titleandborder {
+    gap:12px;
   }
 
   h3,
@@ -582,12 +594,12 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0s 3s, visibility 0s 3s;
-  animation: showContent 3s steps(1, end) forwards;
+  animation: showContent 300ms steps(1, end) forwards; //Remplacer 300ms par 3s
 }
 
 body {
   overflow: hidden;
-  animation: overflowAuto 3s steps(1, end) forwards;
+  animation: overflowAuto 1s steps(1, end) forwards;
 }
 
 @keyframes hideLoader {
@@ -607,5 +619,155 @@ body {
 @keyframes overflowAuto {
   100% {
     overflow: auto;
+  }
+}
+
+//mediaqueries
+
+@media screen and (min-width: 765px) {
+  .header {
+    box-shadow: none;
+    z-index: auto;
+
+    &__container {
+      box-shadow: none;
+      z-index: auto;
+    }
+  }
+
+  .location {
+    box-shadow: none;
+  }
+
+  .explications {
+    gap: 25px;
+    padding: 40px;
+    justify-content: space-between;
+  }
+
+  &__container {
+    gap: 20px;
+    padding-left: 12px;
+    flex-direction: row;
+
+
+  }
+
+  &__bg {
+    height: 72px;
+    width: 100%;
+    background-color: #F6F6F6;
+    gap: 30px;
+
+    align-items: center;
+    position: auto;
+    padding-left: 40px;
+
+  }
+
+  .restaurants {
+    padding: 50px 10% 50px 10%;
+    background-color: #F6F6F6;
+
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 50px;
+      gap: 50px;
+    }
+
+    &__cardcontent {
+      min-width: 45%;
+      max-width: 490px;
+      flex: 1;
+    }
+
+    &__cardlink {
+      z-index: auto;
+    }
+
+    &__cardtext {
+      padding: 15px 13px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__started {
+      justify-content: flex-end;
+    }
+
+    &__conturn {
+      width: 100%;
+      border-radius: 20px 20px 0px 0px;
+      height: 175px;
+    }
+
+    &__conturn--altposition {
+      width: 100%;
+      border-radius: 20px 20px 0px 0px;
+      height: 175px;
+    }
+
+    &__picture {
+      position: relative;
+    }
+
+    &__textpicture {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      background-color: #99E2D0;
+      padding: 5px;
+      border-radius: 2px;
+      color: #008766;
+    }
+
+    &__textcontainer {
+      gap: 3px;
+    }
+
+    &__heartcontainer {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .footer {
+    flex-direction: row-reverse;
+    height: 140px;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    &__logo {
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+
+    ul {
+      gap: 7px;
+      font-weight: 400;
+      font-size: 16px;
+      flex-direction: row;
+
+      gap: 7px;
+    }
+
+    &__online {
+
+
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    &__online i {
+      font-size: 12px;
+      width: 20px;
+    }
+  }
+
+  .description {
+    max-width: 1055px;
+    margin: 0 15%;
   }
 }

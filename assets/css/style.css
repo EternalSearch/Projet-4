@@ -163,6 +163,10 @@ a {
   background-color: #F6F6F6;
   gap: 20px;
   position: relative;
+  margin-bottom: 60px;
+}
+.restaurants__container {
+  gap: 18px;
 }
 .restaurants__cardcontent {
   background-color: #FFFFFF;
@@ -300,6 +304,8 @@ a {
   position: relative;
   z-index: -1;
   height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .price__right {
@@ -336,6 +342,9 @@ a {
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+.description .titleandborder {
+  gap: 12px;
 }
 .description h3,
 .description p {
@@ -481,12 +490,12 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0s 3s, visibility 0s 3s;
-  animation: showContent 3s steps(1, end) forwards;
+  animation: showContent 300ms steps(1, end) forwards;
 }
 
 body {
   overflow: hidden;
-  animation: overflowAuto 3s steps(1, end) forwards;
+  animation: overflowAuto 1s steps(1, end) forwards;
 }
 
 @keyframes hideLoader {
@@ -504,5 +513,125 @@ body {
 @keyframes overflowAuto {
   100% {
     overflow: auto;
+  }
+}
+@media screen and (min-width: 765px) {
+  .header {
+    box-shadow: none;
+    z-index: auto;
+  }
+  .header__container {
+    box-shadow: none;
+    z-index: auto;
+  }
+  .location {
+    box-shadow: none;
+  }
+  .explications {
+    gap: 25px;
+    padding: 40px;
+    justify-content: space-between;
+  }
+  .__container {
+    gap: 20px;
+    padding-left: 12px;
+    flex-direction: row;
+  }
+  .explications__bg {
+    height: 72px;
+    width: 100%;
+    background-color: #F6F6F6;
+    gap: 30px;
+    align-items: center;
+    position: auto;
+    padding-left: 40px;
+  }
+  .restaurants {
+    padding: 50px 10% 50px 10%;
+    background-color: #F6F6F6;
+  }
+  .restaurants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    gap: 50px;
+  }
+  .restaurants__title {
+    gap: 100px;
+  }
+  .restaurants__cardcontent {
+    min-width: 45%;
+    max-width: 490px;
+    flex: 1;
+  }
+  .restaurants__cardlink {
+    z-index: auto;
+  }
+  .restaurants__cardtext {
+    padding: 15px 13px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .restaurants__started {
+    justify-content: flex-end;
+  }
+  .restaurants__conturn {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    height: 175px;
+  }
+  .restaurants__conturn--altposition {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    height: 175px;
+  }
+  .restaurants__picture {
+    position: relative;
+  }
+  .restaurants__textpicture {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: #99E2D0;
+    padding: 5px;
+    border-radius: 2px;
+    color: #008766;
+  }
+  .restaurants__textcontainer {
+    gap: 3px;
+  }
+  .restaurants__heartcontainer {
+    position: relative;
+    top: 5px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    height: 140px;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .footer__logo {
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+  .footer ul {
+    gap: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    flex-direction: row;
+    gap: 7px;
+  }
+  .footer__online {
+    gap: 6px;
+    font-weight: 500;
+  }
+  .footer__online i {
+    font-size: 12px;
+    width: 20px;
+  }
+  .description {
+    max-width: 1055px;
+    margin: 0 15%;
   }
 }/*# sourceMappingURL=style.css.map */
