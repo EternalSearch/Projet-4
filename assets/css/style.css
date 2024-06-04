@@ -353,12 +353,12 @@ body script {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0s 3s, visibility 0s 3s;
-  animation: showContent 0s steps(1, end) forwards;
+  animation: showContent 3s steps(1, end) forwards;
 }
 
 .body_index {
   overflow: hidden;
-  animation: overflowAuto 0s steps(1, end) forwards;
+  animation: overflowAuto 3s steps(1, end) forwards;
 }
 
 .heart {

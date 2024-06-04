@@ -364,14 +364,14 @@
   
   /* Style pour cacher le contenu principal initialement */
   .main_index {
-    opacity: 0;
+    opacity: 0; // Cache <main> par défaut
     visibility: hidden;
     transition: opacity 0s 3s, visibility 0s 3s;
-    animation: showContent 0s steps(1, end) forwards; // remettre 3s
+    animation: showContent 3s steps(1, end) forwards; // Réaffiche <main> en 3s
   }
   
   .body_index {
     overflow: hidden; // Bloque le scroll
-    animation: overflowAuto 0s steps(1, end) forwards; // remettre 3s
+    animation: overflowAuto 3s steps(1, end) forwards; 
   }
   
