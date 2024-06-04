@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body,
+  body * {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a {
+    text-decoration: none;
+    /*pas de soulignement*/
+    color: inherit;
+    /*pas de changement de couleur du lien, garde la couleur originale du texte*/
+  }
+  
+  body script {
+    display: none;
+    /* Masquage pour live server */
+  }
+  

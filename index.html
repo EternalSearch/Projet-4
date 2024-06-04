@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
-<!--**************************************header****************************************-->
+<!--**************************************header**********************************-->
 
-<body>
-    <div class="loader">
+<body class="body_index">
+    <!-- <div class="loader">
         <div class="spinner"></div>
-    </div>
-    <main>
+    </div> -->
+    <main class="main_index">
         <header>
             <div class="header">
                 <div class="header__container">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </header>
-        <!--******************************location***************************************-->
+        <!--******************************location******************************-->
         <div class="location">
             <i class="fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
@@ -41,8 +41,8 @@
         <section class="menu">
             <h1 class="section_title"> Réservez le menu qui vous convient</h1>
             <p class="menu__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="menu__buttonsearch">
-                <p class="menu__textbutton">Explorer nos restaurants</p>
+            <div class="primarybtn">
+                <p class="primarybtn__text">Explorer nos restaurants</p>
             </div>
         </section>
         <!--****************************explications*****************************-->
@@ -85,10 +85,10 @@
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
-                            <div class="restaurants__heartcontainer">
-                                <i class="heart fa-regular fa-heart"></i>
-                            </div>
                         </div>
+                    </a>
+                    <a class="restaurants__heartcontainer">
+                        <i class="heart fa-regular fa-heart"></i>
                     </a>
                 </div>
 
@@ -100,14 +100,17 @@
                             <p class="restaurants__textpicture">Nouveau</p>
                         </div>
                         <div class="restaurants__cardtext">
+
                             <div class="restaurants__textcontainer">
+
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
-                            </div>
-                            <div class="restaurants__heartcontainer">
-                                <i class="heart fa-regular fa-heart"></i>
+
                             </div>
                         </div>
+                    </a>
+                    <a class="restaurants__heartcontainer">
+                        <i class="heart fa-regular fa-heart"></i>
                     </a>
                 </div>
 
@@ -123,10 +126,10 @@
                                 <h3>À la française</h3>
                                 <p>Cité rouge</p>
                             </div>
-                            <div class="restaurants__heartcontainer">
-                                <i class="heart fa-regular fa-heart"></i>
-                            </div>
                         </div>
+                    </a>
+                    <a class="restaurants__heartcontainer">
+                        <i class="heart fa-regular fa-heart"></i>
                     </a>
                 </div>
 
@@ -142,11 +145,11 @@
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <div class="restaurants__heartcontainer">
-                                <i class="heart fa-regular fa-heart"></i>
-                            </div>
                         </div>
                     </a>
+                    <div class="restaurants__heartcontainer">
+                        <i class="heart fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </div>
         </section>
@@ -160,11 +163,13 @@
                     <li class="footer__online"><i class="fa-solid fa-utensils"></i>
                         <p>Proposer un restaurant</p>
                     </li>
+
                     <li class="footer__online"><i class="fa-solid fa-handshake-angle"></i>
                         <p>Devenir partenaire</p>
                     </li>
-                    <li> Mentions légales </li>
+                    <li class="footer__space"> Mentions légales </li>
                     <li> <a href="mailto://omyfood@example.com">Contacts</a></li>
+
                 </ul>
             </div>
         </footer>

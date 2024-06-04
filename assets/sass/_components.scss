@@ -1,0 +1,104 @@
+.heart {
+    position: relative;
+    font-size: 21px;
+    z-index: 1;
+    opacity: 1;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+
+        &::before {
+            opacity: 0;
+        }
+
+    }
+
+    &::after {
+        font: var(--fa-font-solid);
+        content: "\f004";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(to top, $second-color 0%, $main-color 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 300ms;
+
+    }
+}
+
+.primarybtn {
+    border-radius: 40px;
+    width: 218px;
+    height: 50px;
+    background: linear-gradient(to bottom, $second-color 0%, $main-color 100%);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    position: relative;
+    align-self: center;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 300ms;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        border-radius: inherit;
+        background-color: rgba(225, 225, 225, 0.15);
+    }
+
+    &__text {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0s 3s, visibility 0s 3s;
+    animation: hideLoader 3s steps(1, end) forwards;
+}
+
+.spinner {
+    width: 90px;
+    height: 120px;
+    border-top: 8px solid #008766;
+    border-right: 16px solid #89c8fa;
+    border-bottom: 8px solid #003a68;
+    border-left: 16px solid #9356dc;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}

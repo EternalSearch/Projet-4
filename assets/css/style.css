@@ -1,4 +1,3 @@
-/****** Generally ***********/
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +11,13 @@ body * {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  /*pas de soulignement*/
+  color: inherit;
+  /*pas de changement de couleur du lien, garde la couleur originale du texte*/
+}
+
 body script {
   display: none;
   /* Masquage pour live server */
@@ -23,13 +29,6 @@ body script {
   font-style: normal;
 }
 
-a {
-  text-decoration: none;
-  /*pas de soulignement*/
-  color: inherit;
-  /*pas de changement de couleur du lien, garde la couleur originale du texte*/
-}
-
 /**********header***********/
 .header {
   align-items: center;
@@ -38,6 +37,7 @@ a {
 }
 .header__logo {
   height: 30px;
+  margin: 20px 0px 12px 0px;
 }
 .header__container {
   width: 100%;
@@ -81,38 +81,6 @@ a {
   font-size: 18px;
   font-weight: 300;
 }
-.menu__buttonsearch {
-  border-radius: 40px;
-  width: 218px;
-  height: 50px;
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
-  justify-content: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  z-index: 1;
-  position: relative;
-}
-.menu__buttonsearch:hover::after {
-  opacity: 1;
-}
-.menu__buttonsearch::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 300ms;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  border-radius: inherit;
-  background-color: rgba(225, 225, 225, 0.15);
-}
-.menu__textbutton {
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 500;
-}
 
 /***********Section explications*************/
 .explications {
@@ -128,11 +96,11 @@ a {
   width: 100%;
   background-color: #F6F6F6;
   border-radius: 20px;
-  gap: 30px;
+  gap: 20px;
   flex-direction: row;
   align-items: center;
   position: relative;
-  padding-left: 40px;
+  padding: 30px;
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -172,6 +140,7 @@ a {
   background-color: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .restaurants__cardlink {
   z-index: 10;
@@ -226,8 +195,10 @@ a {
   gap: 3px;
 }
 .restaurants__heartcontainer {
-  position: relative;
-  top: 5px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10;
 }
 
 /*****************footer********************/
@@ -240,7 +211,8 @@ a {
   margin-top: -60px;
 }
 .footer__logo {
-  color: #FFFFFF font-size 18px;
+  color: #FFFFFF;
+  font-size: 18px;
 }
 .footer ul {
   gap: 7px;
@@ -258,9 +230,139 @@ a {
   width: 20px;
 }
 
+/*******************anotherpage******************/
+.img {
+  position: relative;
+  z-index: -1;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.price__right {
+  font-size: 15px;
+  font-weight: 700;
+  align-self: flex-end;
+  padding: 15px 15px 15px 0;
+}
+
+.description {
+  gap: 40px;
+  background-color: #F6F6F6;
+  padding: 40px 15px;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  z-index: 1;
+  top: -60px;
+}
+.description section {
+  gap: 12px;
+  opacity: 0;
+}
+.description .started {
+  animation: fadeInAnimation ease 1s;
+  animation-fill-mode: forwards;
+}
+.description .plater {
+  animation: fadeInAnimation ease 3s;
+  animation-fill-mode: forwards;
+}
+.description .desserts {
+  animation: fadeInAnimation ease 5s;
+  animation-fill-mode: forwards;
+}
+.description .titleandborder {
+  gap: 12px;
+}
+.description__cardtitle, .description__cardsubtitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.description__cardtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+.description__cardsubtitle {
+  font-size: 15px;
+  font-weight: 300;
+}
+.description__lefttitle {
+  font-size: 16px;
+  font-weight: 300;
+  flex-direction: row;
+}
+.description__bgmenuanother {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  gap: 5px;
+  overflow: hidden;
+  flex-direction: row;
+  height: 69px;
+}
+.description__bgmenuanother:hover .description__bganimation {
+  margin: 0;
+}
+.description__started {
+  padding: 15px 0 15px 15px;
+  flex: 1;
+  min-width: 0;
+}
+.description__name {
+  flex-direction: row;
+  gap: 30px;
+}
+.description__titlerestaurants {
+  font-weight: 400;
+  font-size: 28px;
+  font-style: italic;
+}
+.description__heartcontainer {
+  width: 50px;
+  justify-content: center;
+}
+.description__bganimation {
+  width: 59px;
+  height: 100%;
+  background-color: #99E2D0;
+  margin-right: -59px;
+  transition: margin-right 250ms;
+  align-items: center;
+  justify-content: center;
+}
+.description__checkcontainer {
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.description__checkcontainer i {
+  color: #99E2D0;
+}
+
+.border {
+  width: 40px;
+  border: 2px solid #99E2D0;
+}
+
+/* Style pour cacher le contenu principal initialement */
+.main_index {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0s 3s, visibility 0s 3s;
+  animation: showContent 0s steps(1, end) forwards;
+}
+
+.body_index {
+  overflow: hidden;
+  animation: overflowAuto 0s steps(1, end) forwards;
+}
+
 .heart {
   position: relative;
-  right: 15px;
   font-size: 21px;
   z-index: 1;
   opacity: 1;
@@ -290,163 +392,38 @@ a {
   transition: opacity 300ms;
 }
 
-.btn {
-  align-items: center;
-  padding: 30px;
-}
-
-/*******************anotherpage******************/
-.header__logo {
-  margin: 20px 0px 12px 0px;
-}
-
-.img {
-  position: relative;
-  z-index: -1;
-  height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.price__right {
-  font-size: 15px;
-  font-weight: 700;
-  align-self: flex-end;
-  padding: 15px 15px 15px 0;
-}
-
-.description {
-  gap: 12px;
-  background-color: #F6F6F6;
-  padding: 15px;
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  z-index: 1;
-  top: -60px;
-}
-.description section {
-  gap: 12px;
-  opacity: 0;
-}
-.description .started {
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.description .plater {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.description .desserts {
-  animation: fadeInAnimation ease 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.description .titleandborder {
-  gap: 12px;
-}
-.description h3,
-.description p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: inline-block;
-}
-.description h3 {
-  font-size: 18px;
-  font-weight: 500;
-}
-.description p {
-  font-size: 15px;
-  font-weight: 300;
-}
-.description__lefttitle {
-  font-size: 16px;
-  font-weight: 300;
-  flex-direction: row;
-}
-.description__bgmenuanother {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  gap: 5px;
-  overflow: hidden;
-  flex-direction: row;
-  height: 69px;
-}
-.description__bgmenuanother:hover .description__bganimation {
-  margin: 0;
-}
-.description__started {
-  padding: 15px 0 15px 15px;
-  flex: 1;
-  min-width: 0;
-}
-.description__name {
-  flex-direction: row;
-  gap: 30px;
-  justify-content: space-between;
-}
-.description__titlerestaurants {
-  font-weight: 400;
-  font-size: 28px;
-  font-style: italic;
-}
-.description__heartcontainer {
-  justify-content: center;
-}
-.description__bganimation {
-  width: 59px;
-  height: 100%;
-  background-color: #99E2D0;
-  margin-right: -59px;
-  transition: margin-right 250ms;
-  align-items: center;
-  justify-content: center;
-}
-.description__checkcontainer {
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.description__checkcontainer i {
-  color: #99E2D0;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.simple__heart {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-}
-
-.border {
-  width: 40px;
-  border: 2px solid #99E2D0;
-}
-
-.commandbuttonsearch {
+.primarybtn {
   border-radius: 40px;
-  width: 186px;
+  width: 218px;
   height: 50px;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   justify-content: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  position: relative;
+  align-self: center;
 }
-
-.butontext {
+.primarybtn:hover::after {
+  opacity: 1;
+}
+.primarybtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: inherit;
+  background-color: rgba(225, 225, 225, 0.15);
+}
+.primarybtn__text {
   color: #FFFFFF;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -467,16 +444,24 @@ a {
 }
 
 .spinner {
-  width: 120px;
+  width: 90px;
   height: 120px;
   border-top: 8px solid #008766;
   border-right: 16px solid #89c8fa;
   border-bottom: 8px solid #003a68;
   border-left: 16px solid #9356dc;
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -485,19 +470,6 @@ a {
     transform: rotate(360deg);
   }
 }
-/* Style pour cacher le contenu principal initialement */
-main {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0s 3s, visibility 0s 3s;
-  animation: showContent 300ms steps(1, end) forwards;
-}
-
-body {
-  overflow: hidden;
-  animation: overflowAuto 1s steps(1, end) forwards;
-}
-
 @keyframes hideLoader {
   100% {
     opacity: 0;
@@ -515,7 +487,7 @@ body {
     overflow: auto;
   }
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .header {
     box-shadow: none;
     z-index: auto;
@@ -529,11 +501,11 @@ body {
   }
   .explications {
     gap: 25px;
-    padding: 40px;
+    padding: 40px 5%;
     justify-content: space-between;
   }
-  .__container {
-    gap: 20px;
+  .explications__container {
+    gap: 35px;
     padding-left: 12px;
     flex-direction: row;
   }
@@ -547,7 +519,7 @@ body {
     padding-left: 40px;
   }
   .restaurants {
-    padding: 50px 10% 50px 10%;
+    padding: 50px 5% 50px 5%;
     background-color: #F6F6F6;
   }
   .restaurants__container {
@@ -557,10 +529,8 @@ body {
     padding-bottom: 50px;
     gap: 50px;
   }
-  .restaurants__title {
-    gap: 100px;
-  }
   .restaurants__cardcontent {
+    position: relative;
     min-width: 45%;
     max-width: 490px;
     flex: 1;
@@ -601,11 +571,8 @@ body {
   .restaurants__textcontainer {
     gap: 3px;
   }
-  .restaurants__heartcontainer {
-    position: relative;
-    top: 5px;
-  }
   .footer {
+    gap: 35px;
     flex-direction: row-reverse;
     height: 140px;
     justify-content: flex-start;
@@ -630,8 +597,28 @@ body {
     font-size: 12px;
     width: 20px;
   }
+  .footer__space {
+    padding-left: 15px;
+  }
   .description {
     max-width: 1055px;
     margin: 0 15%;
+  }
+  .description__name {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .restaurants {
+    padding: 50px 10%;
+  }
+  .explications {
+    padding: 40px 10%;
+  }
+  .footer {
+    gap: 80px;
+  }
+  .footer__space {
+    padding-left: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

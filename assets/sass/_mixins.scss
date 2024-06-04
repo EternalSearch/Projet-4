@@ -1,0 +1,12 @@
+@mixin pictureposition($position) {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    height: 175px;
+    object-fit: cover;
+    object-position: $position;
+}
+
+@mixin sizetext($font-weight) {
+    font-size: 16px;
+    font-weight: font-weight;
+}
