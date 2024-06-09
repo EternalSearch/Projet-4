@@ -1,7 +1,0 @@
-CODE :
-https://github.com/EternalSearch/EternalSearch.github.io
-
-PROTOTYPE :
-https://eternalsearch.github.io/
-
-
