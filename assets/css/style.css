@@ -33,7 +33,8 @@ body script {
 .header {
   align-items: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 9999;
+  z-index: 10;
+  height: 100%;
 }
 .header__logo {
   height: 30px;
@@ -42,13 +43,14 @@ body script {
 .header__container {
   width: 100%;
   align-items: center;
+  justify-content: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 9999;
+  height: 63px;
 }
 .header .arrow {
   position: absolute;
   top: 25px;
-  left: 25px;
+  left: 15px;
 }
 
 /***************location**************/
@@ -249,10 +251,11 @@ body script {
 .description {
   gap: 40px;
   background-color: #F6F6F6;
-  padding: 40px 15px;
   border-radius: 40px 40px 0 0;
   position: relative;
   z-index: 1;
+  padding: 40px 15px;
+  background-clip: padding-box;
   top: -60px;
 }
 .description section {
@@ -300,6 +303,7 @@ body script {
   overflow: hidden;
   flex-direction: row;
   height: 69px;
+  cursor: pointer;
 }
 .description__bgmenuanother:hover .description__bganimation {
   margin: 0;
@@ -312,6 +316,7 @@ body script {
 .description__name {
   flex-direction: row;
   gap: 30px;
+  top: -60px;
 }
 .description__titlerestaurants {
   font-weight: 400;
@@ -319,7 +324,6 @@ body script {
   font-style: italic;
 }
 .description__heartcontainer {
-  width: 50px;
   justify-content: center;
 }
 .description__bganimation {
@@ -366,6 +370,7 @@ body script {
   font-size: 21px;
   z-index: 1;
   opacity: 1;
+  cursor: pointer;
 }
 .heart:hover::after {
   opacity: 1;
@@ -403,6 +408,7 @@ body script {
   z-index: 1;
   position: relative;
   align-self: center;
+  cursor: pointer;
 }
 .primarybtn:hover::after {
   opacity: 1;
@@ -446,12 +452,27 @@ body script {
 .spinner {
   width: 90px;
   height: 120px;
-  border-top: 8px solid #008766;
-  border-right: 16px solid #89c8fa;
-  border-bottom: 8px solid #003a68;
-  border-left: 16px solid #9356dc;
+  border-top: 16px solid #FF79DA;
+  border-right: 8px solid #9356dc;
+  border-bottom: 16px solid #99E2D0;
+  border-left: 8px solid #9356dc;
   border-radius: 50%;
   animation: spin 3s linear infinite;
+}
+
+.searchbar {
+  width: 150px;
+  height: 30px;
+  padding-left: 15px;
+  overflow: hidden;
+  background-color: #EAEAEA;
+  border: 0;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+}
+.searchbar:focus {
+  border-bottom: none;
 }
 
 @keyframes fadeInAnimation {
@@ -495,9 +516,16 @@ body script {
   .header__container {
     box-shadow: none;
     z-index: auto;
+    height: 96px;
+  }
+  .header .arrow {
+    top: 40px;
   }
   .location {
     box-shadow: none;
+  }
+  .img {
+    height: 383px;
   }
   .explications {
     gap: 25px;

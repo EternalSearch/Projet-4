@@ -3,6 +3,7 @@
     font-size: 21px;
     z-index: 1;
     opacity: 1;
+    cursor: pointer;
 
     &:hover {
         &::after {
@@ -47,6 +48,7 @@
     z-index: 1;
     position: relative;
     align-self: center;
+    cursor: pointer;
 
     &:hover {
         &::after {
@@ -95,10 +97,25 @@
 .spinner {
     width: 90px;
     height: 120px;
-    border-top: 8px solid #008766;
-    border-right: 16px solid #89c8fa;
-    border-bottom: 8px solid #003a68;
-    border-left: 16px solid #9356dc;
+    border-top: 16px solid #FF79DA;
+    border-right: 8px solid #9356dc;
+    border-bottom: 16px solid #99E2D0;
+    border-left: 8px solid #9356dc;
     border-radius: 50%;
     animation: spin 3s linear infinite;
+}
+.searchbar{
+    width: 150px;
+    height: 30px;
+    padding-left: 15px;
+    overflow: hidden;
+    background-color: $location-color;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+
+    &:focus {
+        border-bottom: none;
+    }
 }

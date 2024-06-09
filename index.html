@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <!--**************************************header**********************************-->
@@ -24,23 +24,27 @@
     <div class="loader">
         <div class="spinner"></div>
     </div>
-    <main class="main_index">
-        <header>
-            <div class="header">
-                <div class="header__container">
-                    <img class="header__logo" src="assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
-                </div>
+    <header>
+        <div class="header">
+            <div class="header__container">
+                <img class="header__logo" src="../assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
             </div>
-        </header>
+        </div>
+    </header>
+    <main class="main_index">
+
         <!--******************************location******************************-->
         <div class="location">
             <i class="fa-solid fa-location-dot"></i>
-            <p>Paris, Belleville</p>
+            <form>
+                <input type="search" class="searchbar" value="Paris, Belleville">
+            </form>
         </div>
         <!--*******************************menu**********************************-->
         <section class="menu">
-            <h1 class="section_title"> Réservez le menu qui vous convient</h1>
-            <p class="menu__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <h1 class="section_title"> R&eacute;servez le menu qui vous convient</h1>
+            <p class="menu__subtitle">D&eacute;couvrez des restaurants d'exception, s&eacute;lectionn&eacute;s par nos
+                soins.</p>
             <div class="primarybtn">
                 <p class="primarybtn__text">Explorer nos restaurants</p>
             </div>
@@ -63,11 +67,11 @@
                 <div class="explications__bg">
                     <p class="explications__number">3</p>
                     <i class="fa-solid fa-store"></i>
-                    <p>Dégustez au restaurant</p>
+                    <p>D&eacute;gustez au restaurant</p>
                 </div>
             </div>
         </section>
-        <!--****************************restaurant ******************************-->
+        <!--****************************restaurant******************************-->
 
         <section class="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
@@ -82,8 +86,8 @@
                         </div>
                         <div class="restaurants__cardtext">
                             <div class="restaurants__textcontainer">
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                                <h3>La palette du go&ucirc;t</h3>
+                                <p>M&eacute;nilmontant</p>
                             </div>
                         </div>
                     </a>
@@ -96,14 +100,15 @@
                     <a class="restaurants__cardlink" href="restaurants/la-note-enchantee.html">
                         <div class="restaurants__picture">
                             <img class="restaurants__conturn--altposition"
-                                src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                                src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="La note enchant&eacute;e">
                             <p class="restaurants__textpicture">Nouveau</p>
                         </div>
                         <div class="restaurants__cardtext">
 
                             <div class="restaurants__textcontainer">
 
-                                <h3>La note enchantée</h3>
+                                <h3>La note enchant&eacute;e</h3>
                                 <p>Charonne</p>
 
                             </div>
@@ -123,8 +128,8 @@
                         </div>
                         <div class="restaurants__cardtext">
                             <div class="restaurants__textcontainer">
-                                <h3>À la française</h3>
-                                <p>Cité rouge</p>
+                                <h3>&Agrave; la française</h3>
+                                <p>Cit&eacute; rouge</p>
                             </div>
                         </div>
                     </a>
@@ -138,12 +143,12 @@
                         <div class="restaurants__picture">
                             <img class="restaurants__conturn"
                                 src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="Le délice des sens">
+                                alt="Le d&eacute;lice des sens">
                         </div>
                         <div class="restaurants__cardtext">
                             <div class="restaurants__textcontainer">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
+                                <h3>Le d&eacute;lice des sens</h3>
+                                <p>Folie-M&eacute;ricourt</p>
                             </div>
                         </div>
                     </a>
@@ -154,25 +159,27 @@
             </div>
         </section>
 
-
-        <!--********************************footer************************-->
-        <footer>
-            <div class="footer">
-                <h3 class="footer__logo shrikhand-regular">ohmyfood</h3>
-                <ul>
-                    <li class="footer__online"><i class="fa-solid fa-utensils"></i>
-                        <p>Proposer un restaurant</p>
-                    </li>
-
-                    <li class="footer__online"><i class="fa-solid fa-handshake-angle"></i>
-                        <p>Devenir partenaire</p>
-                    </li>
-                    <li class="footer__space"> Mentions légales </li>
-                    <li> <a href="mailto://omyfood@example.com">Contacts</a></li>
-
-                </ul>
-            </div>
-        </footer>
-
     </main>
+    <!--********************************footer************************-->
+    <footer>
+        <div class="footer">
+            <h3 class="footer__logo shrikhand-regular">ohmyfood</h3>
+            <ul>
+                <li class="footer__online"><i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </li>
+
+                <li class="footer__online"><i class="fa-solid fa-handshake-angle"></i>
+                    <p>Devenir partenaire</p>
+                </li>
+                <li class="footer__space"> Mentions l&eacute;gales </li>
+                <li> <a href="mailto://omyfood@example.com">Contacts</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+
 </body>
+
+</html>

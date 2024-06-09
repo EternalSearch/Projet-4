@@ -6,6 +6,11 @@
         &__container {
             box-shadow: none;
             z-index: auto;
+            height: 96px;
+        }
+
+        .arrow {
+            top: 40px;
         }
     }
 
@@ -13,6 +18,10 @@
         box-shadow: none;
     }
 
+    .img {
+        height: 383px;
+    }
+    
     .explications {
         gap: 25px;
         padding: 40px 5%;
